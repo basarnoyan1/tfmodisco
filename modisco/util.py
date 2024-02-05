@@ -100,7 +100,7 @@ def factorial(val):
 
 
 def first_curvature_max(values, bins, bandwidth):
-    from sklearn.neighbors.kde import KernelDensity
+    from sklearn.neighbors._kde import KernelDensity
     kde = KernelDensity(kernel="gaussian", bandwidth=bandwidth).fit(
                 [[x,0] for x in values])
     midpoints = np.min(values)+((np.arange(bins)+0.5)
